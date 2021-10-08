@@ -1,4 +1,5 @@
-require("dotenv").config()
+require("dotenv").config();
+
 import { createServer } from "xhelpers-api/lib/server";
 const pkgJson = require("../package.json");
 

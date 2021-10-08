@@ -9,9 +9,5 @@ export default class PedidoProduto extends Model<PedidoProduto>{
     produto_id:number;
     @Column
     pedido_id:number;
-    
-
-
-
 
 }

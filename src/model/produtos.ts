@@ -1,6 +1,6 @@
 import {Model, Scopes, Table,Column} from "sequelize-typescript"
 @Scopes(() => ({}))
-@Table({ tableName: "produtos" })
+@Table({ tableName: "produtos", timestamps:false})
 export default class Produtos extends Model<Produtos>{
     
     @Column({primaryKey:true})
@@ -15,11 +15,4 @@ export default class Produtos extends Model<Produtos>{
     imagem:string;
     @Column
     tipo:string;
-
-   
-
-    
-
-
-
 }

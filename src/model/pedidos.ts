@@ -1,6 +1,7 @@
-import {Model, Scopes, Table,Column} from "sequelize-typescript"
+import {Model, Scopes, Table,Column} from "sequelize-typescript";
+
 @Scopes(() => ({}))
-@Table({ tableName: "pedidos" })
+@Table({ tableName: "pedidos", timestamps:false })
 export default class Pedidos extends Model<Pedidos>{
     
     @Column({primaryKey:true})
@@ -8,14 +9,7 @@ export default class Pedidos extends Model<Pedidos>{
     @Column
     status:string;
     @Column
-    tipo_pagamengo:string;
+    tipo_pagamento:string;
     @Column
     usuarios_id:number;
-
-   
-
-    
-
-
-
 }
