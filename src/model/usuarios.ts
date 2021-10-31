@@ -1,10 +1,12 @@
-import {Model, Scopes, Table,Column} from "sequelize-typescript"
+import {Model, Scopes, Table,Column, DataType} from "sequelize-typescript"
 @Scopes(() => ({}))
-@Table({ tableName: "usuarios" })
+@Table({ tableName: "usuarios", timestamps:false })
 export default class Usuarios extends Model<Usuarios>{
     
-    @Column({primaryKey:true})
+    @Column({primaryKey:true, type: DataType.INTEGER})
     id:number;
+    @Column
+    nome:string;
     @Column
     senha:string;
     @Column

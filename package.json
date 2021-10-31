@@ -36,6 +36,7 @@
   "dependencies": {
     "@hapi/boom": "^9.1.0",
     "axios": "^0.19.0",
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "csvtojson": "^2.0.10",
     "dotenv": "^8.2.0",

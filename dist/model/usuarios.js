@@ -14,9 +14,13 @@ let Usuarios = (() => {
     let Usuarios = class Usuarios extends sequelize_typescript_1.Model {
     };
     __decorate([
-        sequelize_typescript_1.Column({ primaryKey: true }),
+        sequelize_typescript_1.Column({ primaryKey: true, type: sequelize_typescript_1.DataType.INTEGER }),
         __metadata("design:type", Number)
     ], Usuarios.prototype, "id", void 0);
+    __decorate([
+        sequelize_typescript_1.Column,
+        __metadata("design:type", String)
+    ], Usuarios.prototype, "nome", void 0);
     __decorate([
         sequelize_typescript_1.Column,
         __metadata("design:type", String)
@@ -51,7 +55,7 @@ let Usuarios = (() => {
     ], Usuarios.prototype, "telefone", void 0);
     Usuarios = __decorate([
         sequelize_typescript_1.Scopes(() => ({})),
-        sequelize_typescript_1.Table({ tableName: "usuarios" })
+        sequelize_typescript_1.Table({ tableName: "usuarios", timestamps: false })
     ], Usuarios);
     return Usuarios;
 })();

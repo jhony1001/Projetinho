@@ -27,7 +27,7 @@ let PedidoProduto = (() => {
     ], PedidoProduto.prototype, "pedido_id", void 0);
     PedidoProduto = __decorate([
         sequelize_typescript_1.Scopes(() => ({})),
-        sequelize_typescript_1.Table({ tableName: "pedido_produto" })
+        sequelize_typescript_1.Table({ tableName: "pedido_produto", timestamps: false })
     ], PedidoProduto);
     return PedidoProduto;
 })();
