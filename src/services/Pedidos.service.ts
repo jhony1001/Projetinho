@@ -22,9 +22,18 @@ export default class PedidosService extends BaseServiceSequelize<Pedidos> {
         {
             where:{
                 status:{[Op.ne]:"Finalizado"}
-            }
-        }
-
+            },
+            include: [
+                { model: db.sequelize.models.Usuarios},
+                { 
+                    model: db.sequelize.models.PedidoProduto,
+                    include:[
+                        {model: db.sequelize.models.Produtos}
+                    ]
+                
+                }
+              ]
+        }        
       );
     }
 
